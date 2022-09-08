@@ -6,4 +6,90 @@
 
 body {
     font-family: var(--font);
+    padding: 1rem;
+}
+
+
+/* utilities */
+
+.displayFlexCol {
+    display: flex;
+    flex-direction: column;
+}
+
+/* not utilities..? */
+main {
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+/* form */
+form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2rem;
+    width: 100%;
+}
+
+.inputs--container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(4, auto);
+    grid-template-areas:
+        "first-name last-name"
+        "email place-of-birth"
+        "phone-num favorite-meal"
+        "introduction introduction";
+    gap: 20px;
+    padding: 1rem;
+
+}
+
+/* small screens styling for the input container grid */
+@media screen and (max-width: 709px) {
+    .inputs--container {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+        grid-template-areas:
+            "first-name"
+            "last-name"
+            "email"
+            "place-of-birth"
+            "phone-num"
+            "favorite-meal"
+            "introduction";
+    }
+}
+
+/* input grid: template areas */
+.firstName {
+    grid-area: first-name;
+}
+
+.lastName {
+    grid-area: last-name;
+}
+
+.email {
+    grid-area: email;
+}
+
+.placeOfBirth {
+    grid-area: place-of-birth;
+}
+
+.phoneNum {
+    grid-area: phone-num;
+}
+
+.favoriteMeal {
+    grid-area: favorite-meal;
+}
+
+.introduction {
+    grid-area: introduction;
 }
