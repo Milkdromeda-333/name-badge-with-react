@@ -65,7 +65,7 @@ form {
     }
 }
 
-/* input grid: template areas */
+/* input grid template areas */
 .firstName {
     grid-area: first-name;
 }
@@ -92,4 +92,46 @@ form {
 
 .introduction {
     grid-area: introduction;
+}
+
+
+/* badge component */
+
+.badge {
+    width: 50%;
+}
+
+.badge--header {
+    width: 100%;
+}
+
+.badge--body {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-areas:
+        "email place-of-birth"
+        "phoneNum faveMeal"
+        "intro intro";
+}
+
+#email {
+    grid-area: email;
+}
+
+#placeOfBirth {
+    grid-area: place-of-birth;
+}
+
+#phoneNum {
+    grid-area: phoneNum;
+}
+
+#faveMeal {
+    grid-area: faveMeal;
+}
+
+#intro {
+    grid-area: intro;
+    overflow-y: scroll;
 }

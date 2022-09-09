@@ -4,8 +4,7 @@ import Badge from "./Badge.jsx";
 function App() {
   /*
   TODO:
-  []style badges, include having an alternating heading color.
-  []requiring 3 charecter minimum to text fields
+  []style  bit further
   */
 
   const [formData, setFormData] = useState({
@@ -18,7 +17,7 @@ function App() {
     introduction: ""
   });
 
-  // DOC: when the form is submitted, handle submit is called, calling setBadgeArr, adding the info to badgeArr. And {badges} will add it to the dom.
+  // DOC: when the form is submitted, handleSubmit() is called, calling setBadgeArr, adding the info to badgeArr. And {badges} will add it to the dom.
   const [badgeArr, setBadgeArr] = useState([]);
 
   function handleChange(e) {
@@ -60,6 +59,7 @@ function App() {
               onChange={handleChange}
               value={formData.firstName}
               id="firstName"
+              minLength="3"
               required
             />
           </div>
@@ -74,6 +74,7 @@ function App() {
               onChange={handleChange}
               value={formData.lastName}
               id="lastName"
+              minLength="3"
               required
             />
           </div>
@@ -151,6 +152,7 @@ function App() {
               onChange={handleChange}
               value={formData.introduction}
               id="introduction"
+              minLength="3"
               required
             />
           </div>
